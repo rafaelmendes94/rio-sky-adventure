@@ -46,8 +46,8 @@ const GaleriaSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-12 bg-primary text-white hover:bg-primary/90 border-none" />
-            <CarouselNext className="hidden md:flex -right-12 bg-primary text-white hover:bg-primary/90 border-none" />
+            <CarouselPrevious className="-left-2 sm:-left-4 md:-left-12 bg-primary text-white hover:bg-primary/90 border-none w-8 h-8 sm:w-10 sm:h-10" />
+            <CarouselNext className="-right-2 sm:-right-4 md:-right-12 bg-primary text-white hover:bg-primary/90 border-none w-8 h-8 sm:w-10 sm:h-10" />
           </Carousel>
         </div>
       </div>
