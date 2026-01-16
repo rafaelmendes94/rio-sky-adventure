@@ -22,7 +22,7 @@ const Navbar = () => {
   const navLinks = [
     { href: "#sobre", label: "Incluso" },
     { href: "#precos", label: "Valores" },
-    { href: "#instrutor", label: "Instrutor" },
+    { href: "#instrutor", label: "Piloto" },
     { href: "#contato", label: "Contato" },
   ];
 
@@ -30,17 +30,15 @@ const Navbar = () => {
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "bg-background/95 backdrop-blur-sm border-b border-border py-3" 
+          ? "bg-background/95 backdrop-blur-sm border-b border-border py-2" 
           : "bg-transparent py-4"
       }`}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
-          <a href="#" className="flex items-center gap-2">
-            <img src={logo} alt="Logo" className="w-10 h-10 object-contain rounded" />
-            <span className={`font-semibold hidden sm:block ${isScrolled ? 'text-foreground' : 'text-white'}`}>
-              André do Ponte
-            </span>
+          <a href="#" className="flex items-center gap-3">
+            <img src={logo} alt="Logo" className="w-12 h-12 object-contain" />
+            <span className="font-bold text-lg hidden sm:block">André do Ponte</span>
           </a>
 
           {/* Desktop Nav */}
@@ -49,27 +47,19 @@ const Navbar = () => {
               <a 
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors ${
-                  isScrolled 
-                    ? 'text-muted-foreground hover:text-foreground' 
-                    : 'text-white/80 hover:text-white'
-                }`}
+                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
                 {link.label}
               </a>
             ))}
-            <Button 
-              size="sm" 
-              onClick={handleWhatsApp}
-              className={isScrolled ? '' : 'bg-white text-foreground hover:bg-white/90'}
-            >
+            <Button size="sm" onClick={handleWhatsApp}>
               Agendar
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button 
-            className={`md:hidden p-2 ${isScrolled ? 'text-foreground' : 'text-white'}`}
+            className="md:hidden p-2 text-foreground"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -78,13 +68,13 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className={`md:hidden mt-4 pb-4 pt-4 border-t ${isScrolled ? 'border-border' : 'border-white/20'}`}>
+          <div className="md:hidden mt-4 pb-4 pt-4 border-t border-border">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a 
                   key={link.href}
                   href={link.href}
-                  className={`text-sm font-medium ${isScrolled ? 'text-foreground' : 'text-white'}`}
+                  className="text-sm font-medium text-foreground hover:text-primary"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
