@@ -8,27 +8,24 @@ const images = [voo2, voo3, voo4, voo5, voo6];
 
 const GaleriaSection = () => {
   return (
-    <section className="py-20 bg-secondary">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Você voa. A gente registra tudo.
+            Sua Visão Durante O <span className="text-primary">Vôo</span>
           </h2>
-          <p className="text-muted-foreground">
-            Veja momentos de alguns dos nossos voos
-          </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {images.map((img, index) => (
             <div 
               key={index} 
-              className="aspect-[3/4] rounded-xl overflow-hidden"
+              className="aspect-[3/4] rounded-lg overflow-hidden border border-border"
             >
               <img 
                 src={img} 
                 alt={`Voo ${index + 1}`}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
               />
             </div>
           ))}
