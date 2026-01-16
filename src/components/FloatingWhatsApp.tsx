@@ -8,10 +8,10 @@ const FloatingWhatsApp = () => {
   return (
     <button
       onClick={handleWhatsApp}
-      className="fixed bottom-6 right-6 z-50 w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300 hover:shadow-xl animate-pulse-slow"
+      className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition-transform"
       aria-label="Abrir WhatsApp"
     >
-      <MessageCircle className="w-8 h-8 text-white" />
+      <MessageCircle className="w-6 h-6 text-white" />
     </button>
   );
 };

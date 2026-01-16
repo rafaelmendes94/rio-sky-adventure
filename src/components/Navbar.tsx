@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Plane, Menu, X, MessageCircle } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
@@ -19,7 +19,7 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { href: "#sobre", label: "O Que Inclui" },
+    { href: "#sobre", label: "Incluso" },
     { href: "#instrutor", label: "Instrutor" },
     { href: "#contato", label: "Contato" },
   ];
@@ -28,16 +28,14 @@ const Navbar = () => {
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "bg-background/95 backdrop-blur-md border-b border-border/50 py-3" 
-          : "bg-transparent py-5"
+          ? "bg-background/95 backdrop-blur-sm border-b border-border py-4" 
+          : "bg-transparent py-6"
       }`}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
-            <Plane className="w-7 h-7 text-primary" />
-            <span className="font-bold text-lg hidden sm:block">André do Ponte</span>
+          <a href="#" className={`font-semibold text-lg ${isScrolled ? 'text-foreground' : 'text-white'}`}>
+            André do Ponte
           </a>
 
           {/* Desktop Nav */}
@@ -46,47 +44,49 @@ const Navbar = () => {
               <a 
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+                className={`text-sm font-medium transition-colors ${
+                  isScrolled 
+                    ? 'text-muted-foreground hover:text-foreground' 
+                    : 'text-white/80 hover:text-white'
+                }`}
               >
                 {link.label}
               </a>
             ))}
-            <Button variant="gold" size="sm" onClick={handleWhatsApp}>
-              <MessageCircle className="w-4 h-4" />
-              Agendar Voo
+            <Button 
+              size="sm" 
+              onClick={handleWhatsApp}
+              className={isScrolled ? '' : 'bg-white text-foreground hover:bg-white/90'}
+            >
+              Agendar
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden p-2"
+            className={`md:hidden p-2 ${isScrolled ? 'text-foreground' : 'text-white'}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
+            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-border/50 pt-4">
+          <div className="md:hidden mt-4 pb-4 pt-4 border-t border-border/20">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a 
                   key={link.href}
                   href={link.href}
-                  className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+                  className={`text-sm font-medium ${isScrolled ? 'text-foreground' : 'text-white'}`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
                 </a>
               ))}
-              <Button variant="gold" size="sm" onClick={handleWhatsApp} className="mt-2">
-                <MessageCircle className="w-4 h-4" />
-                Agendar Voo
+              <Button size="sm" onClick={handleWhatsApp} className="w-fit">
+                Agendar
               </Button>
             </div>
           </div>

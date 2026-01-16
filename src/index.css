@@ -2,53 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 5%;
-    --foreground: 0 0% 100%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 8%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 8%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
 
-    --primary: 45 100% 50%;
-    --primary-foreground: 0 0% 5%;
+    --primary: 0 0% 8%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 8%;
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 70%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 45 100% 50%;
-    --accent-foreground: 0 0% 5%;
+    --accent: 45 100% 51%;
+    --accent-foreground: 0 0% 8%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 45 100% 50%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 8%;
 
-    --radius: 0.75rem;
-
-    --sidebar-background: 0 0% 8%;
-    --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 45 100% 50%;
-    --sidebar-primary-foreground: 0 0% 5%;
-    --sidebar-accent: 0 0% 15%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 20%;
-    --sidebar-ring: 45 100% 50%;
-
-    /* Custom tokens */
-    --gold: 45 100% 50%;
-    --gold-dark: 45 100% 40%;
-    --gold-light: 45 100% 60%;
+    --radius: 0.5rem;
   }
 }
 
@@ -58,8 +44,8 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Montserrat', sans-serif;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
   }
   
   html {
@@ -68,58 +54,7 @@
 }
 
 @layer utilities {
-  .text-gradient-gold {
-    @apply bg-gradient-to-r from-[hsl(45,100%,60%)] via-[hsl(45,100%,50%)] to-[hsl(40,100%,45%)] bg-clip-text text-transparent;
-  }
-  
-  .bg-gradient-hero {
-    background: linear-gradient(180deg, 
-      hsla(0, 0%, 0%, 0.3) 0%, 
-      hsla(0, 0%, 0%, 0.6) 50%,
-      hsla(0, 0%, 5%, 1) 100%
-    );
-  }
-  
-  .bg-gradient-section {
-    background: linear-gradient(135deg, 
-      hsl(0, 0%, 8%) 0%, 
-      hsl(0, 0%, 5%) 100%
-    );
-  }
-  
-  .shadow-gold {
-    box-shadow: 0 0 30px hsla(45, 100%, 50%, 0.3),
-                0 0 60px hsla(45, 100%, 50%, 0.1);
-  }
-  
-  .shadow-gold-hover {
-    box-shadow: 0 0 40px hsla(45, 100%, 50%, 0.5),
-                0 0 80px hsla(45, 100%, 50%, 0.2);
-  }
-  
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
-  }
-  
-  .animate-pulse-slow {
-    animation: pulse-slow 3s ease-in-out infinite;
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-}
-
-@keyframes pulse-slow {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
+  .text-accent-gradient {
+    @apply text-[hsl(45,100%,45%)];
   }
 }
