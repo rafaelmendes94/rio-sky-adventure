@@ -8,7 +8,7 @@ const images = [voo2, voo3, voo4, voo5, voo6];
 
 const GaleriaSection = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-light-section">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -20,7 +20,7 @@ const GaleriaSection = () => {
           {images.map((img, index) => (
             <div 
               key={index} 
-              className="aspect-[3/4] rounded-lg overflow-hidden border border-border"
+              className="aspect-[3/4] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
             >
               <img 
                 src={img} 
