@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.jpg";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,6 +21,7 @@ const Navbar = () => {
 
   const navLinks = [
     { href: "#sobre", label: "Incluso" },
+    { href: "#precos", label: "Valores" },
     { href: "#instrutor", label: "Instrutor" },
     { href: "#contato", label: "Contato" },
   ];
@@ -28,18 +30,21 @@ const Navbar = () => {
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? "bg-background/95 backdrop-blur-sm border-b border-border py-4" 
-          : "bg-transparent py-6"
+          ? "bg-background/95 backdrop-blur-sm border-b border-border py-3" 
+          : "bg-transparent py-4"
       }`}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
-          <a href="#" className={`font-semibold text-lg ${isScrolled ? 'text-foreground' : 'text-white'}`}>
-            André do Ponte
+          <a href="#" className="flex items-center gap-2">
+            <img src={logo} alt="Logo" className="w-10 h-10 object-contain rounded" />
+            <span className={`font-semibold hidden sm:block ${isScrolled ? 'text-foreground' : 'text-white'}`}>
+              André do Ponte
+            </span>
           </a>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <a 
                 key={link.href}
@@ -73,7 +78,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 pt-4 border-t border-border/20">
+          <div className={`md:hidden mt-4 pb-4 pt-4 border-t ${isScrolled ? 'border-border' : 'border-white/20'}`}>
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <a 
