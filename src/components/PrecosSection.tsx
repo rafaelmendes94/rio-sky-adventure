@@ -12,20 +12,20 @@ const PrecosSection = () => {
   };
 
   return (
-    <section id="precos" className="py-20 bg-orange-section text-white">
+    <section id="precos" className="py-20 bg-card">
       <div className="container mx-auto px-6">
         <div className="max-w-md mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
-            Valores
+            <span className="text-primary">Valores</span>
           </h2>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-8">
-            <p className="text-white/80 mb-2">Domingo a Sábado</p>
-            <p className="text-6xl font-bold mb-2">R$ 850</p>
-            <p className="text-white/80 mb-6">(Pix / Dinheiro)</p>
+          <div className="bg-primary/10 rounded-2xl p-8 border border-primary/20 mb-8">
+            <p className="text-muted-foreground mb-2">Domingo a Sábado</p>
+            <p className="text-6xl font-bold text-primary mb-2">R$ 850</p>
+            <p className="text-muted-foreground mb-6">(Pix / Dinheiro)</p>
             
-            <div className="border-t border-white/20 pt-4">
-              <p className="text-sm text-white/70">
+            <div className="border-t border-primary/20 pt-4">
+              <p className="text-sm text-muted-foreground">
                 Cartão até 10x <span className="text-xs">(juros do cartão)</span>
               </p>
             </div>
@@ -34,7 +34,7 @@ const PrecosSection = () => {
           <Button 
             size="lg" 
             onClick={handleWhatsApp} 
-            className="text-lg px-10 w-full bg-white text-primary hover:bg-white/90 animate-pulse-button"
+            className="text-lg px-10 w-full animate-pulse-button"
           >
             <WhatsAppIcon />
             AGENDE SEU VÔO
