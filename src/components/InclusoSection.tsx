@@ -36,7 +36,7 @@ const InclusoSection = () => {
   };
 
   return (
-    <section id="sobre" className="py-20 bg-orange-section text-white">
+    <section id="sobre" className="py-20 bg-gradient-to-br from-primary via-primary to-orange-600 text-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
