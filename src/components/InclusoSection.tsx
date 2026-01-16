@@ -36,20 +36,20 @@ const InclusoSection = () => {
   };
 
   return (
-    <section id="sobre" className="py-20 bg-gradient-to-br from-primary via-primary to-orange-600 text-white">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+    <section id="sobre" className="py-16 sm:py-20 bg-gradient-to-br from-primary via-primary to-orange-600 text-white">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
             O Que Está Incluso
           </h2>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto mb-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 max-w-5xl mx-auto mb-8 sm:mb-12">
           {inclusions.map((item, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
-              <item.icon className="w-10 h-10 text-white mb-4" />
-              <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-              <p className="text-white/80 text-sm">{item.description}</p>
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 sm:p-6 border border-white/20">
+              <item.icon className="w-8 h-8 sm:w-10 sm:h-10 text-white mb-3 sm:mb-4" />
+              <h3 className="font-semibold text-sm sm:text-lg mb-1 sm:mb-2">{item.title}</h3>
+              <p className="text-white/80 text-xs sm:text-sm">{item.description}</p>
             </div>
           ))}
         </div>
@@ -58,10 +58,11 @@ const InclusoSection = () => {
           <Button 
             size="lg" 
             onClick={handleWhatsApp} 
-            className="text-lg px-10 bg-white text-primary hover:bg-white/90 animate-pulse-button"
+            className="text-base sm:text-lg px-6 sm:px-10 bg-white text-primary hover:bg-white/90 animate-pulse-button"
           >
             <WhatsAppIcon />
-            AGENDE SEU VÔO
+            <span className="hidden sm:inline">AGENDE SEU VÔO</span>
+            <span className="sm:hidden">AGENDAR</span>
           </Button>
         </div>
       </div>

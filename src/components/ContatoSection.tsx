@@ -82,7 +82,7 @@ const ContatoSection = () => {
           </div>
 
           {/* Map */}
-          <div className="rounded-lg overflow-hidden h-[400px] shadow-lg">
+          <div className="rounded-lg overflow-hidden h-[300px] lg:h-[400px] shadow-lg">
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.5998478914777!2d-43.27947892469685!3d-22.996714979193344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd55ed15d23d9%3A0x1faef95dc3d98d3b!2sPraia%20de%20S%C3%A3o%20Conrado!5e0!3m2!1spt-BR!2sbr!4v1705425600000!5m2!1spt-BR!2sbr"
               width="100%" 

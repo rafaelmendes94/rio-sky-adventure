@@ -17,10 +17,10 @@ const images = [voo2, voo3, voo4, voo5, voo6, voo7, voo8];
 
 const GaleriaSection = () => {
   return (
-    <section className="py-20 bg-card">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+    <section className="py-16 sm:py-20 bg-card">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
             Sua Visão Durante O <span className="text-primary">Vôo</span>
           </h2>
         </div>
