@@ -94,7 +94,7 @@ const DepoimentosSection = () => {
 
         <div className="text-center mt-10">
           <a 
-            href="https://www.google.com/search?q=CSCVL+-+Clube+S%C3%A3o+Conrado+de+Voo+Livre#lrd=0x9bd720f722ff03:0xbaa4f237af256d7b,1,,,," 
+            href="https://g.page/r/CRBidzSnN6jUEBI/review" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-primary hover:underline font-medium"
