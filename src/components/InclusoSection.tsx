@@ -61,7 +61,7 @@ const InclusoSection = () => {
             className="text-base sm:text-lg px-6 sm:px-10 bg-white text-primary hover:bg-white/90 animate-pulse-button"
           >
             <WhatsAppIcon />
-            <span className="hidden sm:inline">AGENDE SEU VÔO</span>
+            <span className="hidden sm:inline">AGENDE SEU VOO</span>
             <span className="sm:hidden">AGENDAR</span>
           </Button>
         </div>

@@ -37,7 +37,7 @@ const PrecosSection = () => {
             className="text-lg px-10 w-full animate-pulse-button"
           >
             <WhatsAppIcon />
-            AGENDE SEU VÔO
+            AGENDE SEU VOO
           </Button>
         </div>
       </div>

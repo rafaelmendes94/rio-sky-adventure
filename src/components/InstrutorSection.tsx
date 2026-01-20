@@ -48,7 +48,7 @@ const InstrutorSection = () => {
             className="text-lg px-10 animate-pulse-button"
           >
             <WhatsAppIcon />
-            AGENDE SEU VÔO
+            AGENDE SEU VOO
           </Button>
         </div>
       </div>
