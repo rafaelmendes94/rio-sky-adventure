@@ -77,7 +77,7 @@ const ContatoSection = () => {
               className="w-full text-lg mt-4 animate-pulse-button"
             >
               <WhatsAppIcon />
-              AGENDE SEU VÔO
+              AGENDE SEU VOO
             </Button>
           </div>
 
